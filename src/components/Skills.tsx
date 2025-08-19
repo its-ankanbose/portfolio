@@ -10,44 +10,44 @@ const Skills: React.FC = () => {
       icon: <Code className="w-6 h-6" />,
       title: 'Programming Languages',
       skills: [
-        { name: 'C', level: 85 },
-        { name: 'C++', level: 80 },
-        { name: 'Java', level: 75 },
-        { name: 'Python', level: 70 },
-        { name: 'HTML', level: 85 }
+        { name: 'C' },
+        { name: 'C++' },
+        { name: 'Java' },
+        { name: 'Python' },
+        { name: 'HTML' }
       ]
     },
     {
       icon: <Wrench className="w-6 h-6" />,
       title: 'Engineering Tools',
       skills: [
-        { name: 'MATLAB', level: 80 },
-        { name: 'Octave', level: 75 },
-        { name: 'Simulink', level: 70 },
-        { name: 'CST Microwave Studio', level: 65 },
-        { name: 'VS Code', level: 90 }
+        { name: 'MATLAB' },
+        { name: 'Octave' },
+        { name: 'Simulink' },
+        { name: 'CST Microwave Studio' },
+        { name: 'VS Code' }
       ]
     },
     {
       icon: <Cpu className="w-6 h-6" />,
       title: 'Hardware & Embedded',
       skills: [
-        { name: 'VHDL', level: 70 },
-        { name: 'Xilinx', level: 65 },
-        { name: 'Arduino IDE', level: 85 },
-        { name: 'ESP8266', level: 80 },
-        { name: 'Circuit Design', level: 75 }
+        { name: 'VHDL' },
+        { name: 'Xilinx' },
+        { name: 'Arduino IDE' },
+        { name: 'ESP8266' },
+        { name: 'Circuit Design' }
       ]
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: 'Concepts & Technologies',
       skills: [
-        { name: 'DSA', level: 75 },
-        { name: 'IoT', level: 80 },
-        { name: 'Signal Processing', level: 70 },
-        { name: 'Communication Systems', level: 75 },
-        { name: 'Data Visualization', level: 70 }
+        { name: 'DSA' },
+        { name: 'IoT' },
+        { name: 'Signal Processing' },
+        { name: 'Communication Systems' },
+        { name: 'Data Visualization' }
       ]
     }
   ];
@@ -101,25 +101,32 @@ const Skills: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="relative">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: isVisible ? `${skill.level}%` : '0%'
-                        }}
-                      ></div>
-                    </div>
+                  <div
+                    key={skillIndex}
+                    className={`
+                      px-4 py-3 bg-gray-50 dark:bg-gray-800 rounded-full text-center
+                      border border-gray-200 dark:border-gray-700
+                      hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50
+                      dark:hover:from-blue-900/20 dark:hover:to-purple-900/20
+                      hover:border-blue-200 dark:hover:border-blue-700
+                      transition-all duration-300 transform hover:scale-105 hover:shadow-md
+                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+                      dark:focus:ring-offset-gray-900
+                      cursor-default
+                      ${isVisible ? 'animate-fade-in' : 'opacity-0'}
+                    `}
+                    style={{
+                      animationDelay: `${(categoryIndex * 100) + (skillIndex * 50)}ms`
+                    }}
+                    tabIndex={0}
+                    role="button"
+                    aria-label={`Skill: ${skill.name}`}
+                  >
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -127,6 +134,23 @@ const Skills: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 0.6s ease-out forwards;
+        }
+      `}</style>
     </section>
   );
 };
