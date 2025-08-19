@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+91 XXXXX XXXXX',
+      value: '+91 73192 77270',
       link: 'tel:+91XXXXXXXXXX',
       gradient: 'from-green-500 to-teal-600'
     },
