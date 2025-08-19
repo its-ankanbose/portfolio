@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
       value: '+91 73192 77270',
-      link: 'tel:+91XXXXXXXXXX',
+      link: 'tel:+917319277270',
       gradient: 'from-green-500 to-teal-600'
     },
     {
@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
     {
       icon: <Globe className="w-6 h-6" />,
       title: 'Portfolio',
-      value: 'ankanbose.dev',
+      value: 'its-ankanbose.vercel.app',
       link: '#',
       gradient: 'from-orange-500 to-red-600'
     }
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
     {
       name: 'Email',
       icon: <Mail className="w-6 h-6" />,
-      url: 'mailto:thisisme@yahoo.com',
+      url: 'ankanbose.work.26@gmail.com',
       color: 'hover:text-red-600'
     }
   ];
