@@ -18,12 +18,8 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Construct mailto link
-    const mailto = `mailto:freelancerankan404@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
-    // Open mail client
-    window.location.href = mailto;
+    // Handle form submission here
+    console.log('Form submitted:', formData);
     // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
