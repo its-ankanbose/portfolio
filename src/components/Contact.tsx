@@ -18,8 +18,12 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    // Construct mailto link
+    const mailto = `mailto:freelancerankan404@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    // Open mail client
+    window.location.href = mailto;
     // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
@@ -43,14 +47,14 @@ const Contact: React.FC = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
       value: 'Chittaranjan, West Bengal',
-      link: '#',
+      link: 'https://maps.app.goo.gl/L29KXSFjLUKvt8Cj6',
       gradient: 'from-purple-500 to-pink-600'
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: 'Portfolio',
       value: 'its-ankanbose.vercel.app',
-      link: '#',
+      link: 'its-ankanbose.vercel.app',
       gradient: 'from-orange-500 to-red-600'
     }
   ];
@@ -59,19 +63,19 @@ const Contact: React.FC = () => {
     {
       name: 'GitHub',
       icon: <Github className="w-6 h-6" />,
-      url: '#',
+      url: 'https://github.com/its-ankanbose',
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-6 h-6" />,
-      url: '#',
+      url: 'www.linkedin.com/in/its-bose',
       color: 'hover:text-blue-600'
     },
     {
       name: 'Email',
       icon: <Mail className="w-6 h-6" />,
-      url: 'ankanbose.work.26@gmail.com',
+      url: 'mailto:freelancerankan404@gmail.com',
       color: 'hover:text-red-600'
     }
   ];
