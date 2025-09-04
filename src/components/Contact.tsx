@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
       icon: <Globe className="w-6 h-6" />,
       title: 'Portfolio',
       value: 'its-ankanbose.vercel.app',
-      link: 'its-ankanbose.vercel.app',
+      link: 'https://its-ankanbose.vercel.app',
       gradient: 'from-orange-500 to-red-600'
     }
   ];
