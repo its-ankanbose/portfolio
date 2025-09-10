@@ -28,29 +28,29 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'freelancerankan404@gmail.com',
-      link: 'mailto:freelancerankan404@gmail.com',
+      value: 'thisisme@yahoo.com',
+      link: 'mailto:thisisme@yahoo.com',
       gradient: 'from-blue-500 to-cyan-600'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+91 73192 77270',
-      link: 'tel:+917319277270',
+      value: '+91 XXXXX XXXXX',
+      link: 'tel:+91XXXXXXXXXX',
       gradient: 'from-green-500 to-teal-600'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
       value: 'Chittaranjan, West Bengal',
-      link: 'https://maps.app.goo.gl/L29KXSFjLUKvt8Cj6',
+      link: '#',
       gradient: 'from-purple-500 to-pink-600'
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: 'Portfolio',
-      value: 'its-ankanbose.vercel.app',
-      link: 'https://its-ankanbose.vercel.app',
+      value: 'ankanbose.dev',
+      link: '#',
       gradient: 'from-orange-500 to-red-600'
     }
   ];
@@ -59,19 +59,19 @@ const Contact: React.FC = () => {
     {
       name: 'GitHub',
       icon: <Github className="w-6 h-6" />,
-      url: 'https://github.com/its-ankanbose',
+      url: '#',
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-6 h-6" />,
-      url: 'https://www.linkedin.com/in/its-bose',
+      url: '#',
       color: 'hover:text-blue-600'
     },
     {
       name: 'Email',
       icon: <Mail className="w-6 h-6" />,
-      url: 'mailto:freelancerankan404@gmail.com',
+      url: 'mailto:thisisme@yahoo.com',
       color: 'hover:text-red-600'
     }
   ];
