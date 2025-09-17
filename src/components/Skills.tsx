@@ -1,80 +1,57 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Code, Wrench, Cpu, Globe } from 'lucide-react';
 
 const Skills: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
 
   const skillCategories = [
     {
       icon: <Code className="w-6 h-6" />,
       title: 'Programming Languages',
       skills: [
-        { name: 'C', level: 85 },
-        { name: 'C++', level: 80 },
-        { name: 'Java', level: 75 },
-        { name: 'Python', level: 70 },
-        { name: 'HTML', level: 85 }
+        { name: 'C' },
+        { name: 'C++' },
+        { name: 'Java' },
+        { name: 'Python' },
+        { name: 'HTML' }
       ]
     },
     {
       icon: <Wrench className="w-6 h-6" />,
       title: 'Engineering Tools',
       skills: [
-        { name: 'MATLAB', level: 80 },
-        { name: 'Octave', level: 75 },
-        { name: 'Simulink', level: 70 },
-        { name: 'CST Microwave Studio', level: 65 },
-        { name: 'VS Code', level: 90 }
+        { name: 'MATLAB' },
+        { name: 'Octave' },
+        { name: 'Simulink' },
+        { name: 'CST Microwave Studio' },
+        { name: 'VS Code' }
       ]
     },
     {
       icon: <Cpu className="w-6 h-6" />,
       title: 'Hardware & Embedded',
       skills: [
-        { name: 'VHDL', level: 70 },
-        { name: 'Verilog', level: 65 },
-        { name: 'Arduino IDE', level: 85 },
-        { name: 'ESP8266', level: 80 },
-        { name: 'Circuit Design', level: 75 }
+        { name: 'VHDL' },
+        { name: 'Verilog' },
+        { name: 'Arduino IDE' },
+        { name: 'ESP8266' },
+        { name: 'Circuit Design' }
       ]
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: 'Concepts & Technologies',
       skills: [
-        { name: 'DSA', level: 75 },
-        { name: 'IoT', level: 80 },
-        { name: 'Signal Processing', level: 70 },
-        { name: 'Communication Systems', level: 75 },
-        { name: 'Data Visualization', level: 70 }
+        { name: 'DSA' },
+        { name: 'IoT' },
+        { name: 'Signal Processing' },
+        { name: 'Communication Systems' },
+        { name: 'Data Visualization' }
       ]
     }
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <section ref={sectionRef} id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -101,25 +78,13 @@ const Skills: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="relative">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: isVisible ? `${skill.level}%` : '0%'
-                        }}
-                      ></div>
-                    </div>
+                  <div
+                    key={skillIndex}
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg px-4 py-2 shadow-md cursor-default select-none hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+                  >
+                    {skill.name}
                   </div>
                 ))}
               </div>
