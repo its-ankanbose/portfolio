@@ -28,8 +28,8 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'mailto:ankanbose.work.26@gmail.com',
-      link: 'ankanbose.work.26@gmail.com',
+      value: 'ankanbose.work.26@gmail.com',
+      link: 'mailto:ankanbose.work.26@gmail.com',
       gradient: 'from-blue-500 to-cyan-600'
     },
     {
