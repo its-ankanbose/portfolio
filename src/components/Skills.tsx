@@ -12,7 +12,9 @@ const Skills: React.FC = () => {
         { name: 'C++' },
         { name: 'Java' },
         { name: 'Python' },
-        { name: 'HTML' }
+        { name: 'HTML' },
+        { name: 'CSS' },
+        { name: 'JavaScript' }
       ]
     },
     {
@@ -82,7 +84,7 @@ const Skills: React.FC = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg px-4 py-2 shadow-md cursor-default select-none hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+                    className="bg-white/20 dark:bg-gray-900/20 backdrop-blur-md border border-white/30 dark:border-gray-700/30 text-gray-900 dark:text-white rounded-lg px-4 py-2 shadow-md cursor-default select-none hover:bg-white/30 dark:hover:bg-gray-900/30 hover:shadow-xl hover:-translate-y-2 transition-all duration-200"
                   >
                     {skill.name}
                   </div>
