@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-6 h-6" />,
-      url: 'www.linkedin.com/in/its-bose',
+      url: 'https://linkedin.com/in/its-bose',
       color: 'hover:text-blue-600'
     },
     {

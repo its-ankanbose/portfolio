@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
               <Github className="w-6 h-6 text-gray-600 dark:text-gray-300" />
             </a>
             <a
-              href="www.linkedin.com/in/its-bose"
+              href="https://linkedin.com/in/its-bose"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
             >
               <Linkedin className="w-6 h-6 text-gray-600 dark:text-gray-300" />
