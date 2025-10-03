@@ -80,19 +80,19 @@ const Hero: React.FC = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12">
             <a
-              href="mailto:thisisme@yahoo.com"
+              href="mailto:ankanbose.work.26@gmail.com"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
             >
               <Mail className="w-6 h-6 text-gray-600 dark:text-gray-300" />
             </a>
             <a
-              href="#"
+              href="https://github.com/its-ankanbose"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
             >
               <Github className="w-6 h-6 text-gray-600 dark:text-gray-300" />
             </a>
             <a
-              href="#"
+              href="www.linkedin.com/in/its-bose"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
             >
               <Linkedin className="w-6 h-6 text-gray-600 dark:text-gray-300" />
